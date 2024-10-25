@@ -1,0 +1,12 @@
+{
+    "tasks": {
+        "test": "deno test --watch deno.test.ts"
+    },
+    "importMap": "./import_map.json",
+    "nodeModulesDir": "none",
+    "test": {
+        "include": [
+            "deno.test.ts"
+        ]
+    }
+}

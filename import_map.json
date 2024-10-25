@@ -1,7 +1,6 @@
 {
     "imports": {
-        "chalk": "npm:chalk@5.2.0",
-        "node:util": "https://deno.land/std@0.170.0/node/util.ts",
+        "bun": "./node_modules/bun-types/index.d.ts",
         "bun:test": "./node_modules/bun-types/test.d.ts"
     }
 }

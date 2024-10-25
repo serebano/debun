@@ -60,7 +60,7 @@ export function isInDenoDir(filepath: string): boolean {
 }
 
 export function getPluginPath(): string {
-    return path.resolve(import.meta.dirname, "..");
+    return import.meta.resolve('./plugin.ts').replace('file://', '');
 }
 
 export function getDenoDtsPath(
