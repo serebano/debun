@@ -1,6 +1,6 @@
 {
   "name": "@serebano/debun",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Enable remote imports for Bun using Deno",
   "module": "index.ts",
   "type": "module",
