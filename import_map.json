@@ -1,6 +1,6 @@
 {
     "imports": {
-        "bun": "./node_modules/bun-types/index.d.ts",
-        "bun:test": "./node_modules/bun-types/test.d.ts"
+        "bun": "npm:bun-types",
+        "bun:test": "npm:bun-types"
     }
 }

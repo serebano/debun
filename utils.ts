@@ -1,4 +1,3 @@
-import { $, inspect } from "bun"
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -50,7 +49,7 @@ export function getDenoRemoteDir(): string {
 }
 
 export function getDenoInfo() {
-    return $`deno info --json`.json();
+    return Bun.$`deno info --json`.json();
 }
 
 export function isInDenoDir(filepath: string): boolean {
@@ -129,7 +128,7 @@ export function resolveImport(specifier: string | URL) {
 }
 
 export async function getInfo(specifier: string | URL): Promise<ModuleInfo | undefined> {
-    const result = await $`deno info --json ${specifier}`.json() as DependencyInspectorResult
+    const result = await Bun.$`deno info --json ${specifier}`.json() as DependencyInspectorResult
 
     return result.modules.find((info) => info.specifier === specifier);
 }
@@ -147,6 +146,6 @@ export function log(value: unknown): void {
         strAbbreviateSize: Infinity,
     };
 
-    const formattedOutput = inspect(value, inspectOpts);
+    const formattedOutput = Bun.inspect(value, inspectOpts);
     console.log(formattedOutput);
 }

@@ -1,6 +1,5 @@
-import { $, type BunPlugin } from "bun";
-import { getDenoRemoteDir, hashURL, pathExistsSync, resolveImport } from "./utils.ts";
-import { join, resolve as resolvePath } from "node:path";
+import type { BunPlugin } from "bun";
+import { pathExistsSync, resolveImport } from "./utils.ts";
 
 // Regexes
 const rx_any = /./;
@@ -17,7 +16,7 @@ export const plugin: BunPlugin = {
             console.log(`(debun.plugin) \n\tloading ${specifier} \n\tlocal ${moduleFilePath}`);
 
             if (!pathExistsSync(moduleFilePath)) {
-                await $`deno info ${specifier}`
+                await Bun.$`deno info ${specifier}`
 
                 if (!pathExistsSync(moduleFilePath))
                     throw new Error(`Module not found: ${specifier} (${moduleFilePath})`);
