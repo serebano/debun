@@ -1,0 +1,13 @@
+{
+  "name": "debun",
+  "version": "0.0.1",
+  "description": "Enable remote imports for bun using deno",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^1.1.33"
+  },
+  "scripts": {
+    "test": "bun test --watch"
+  }
+}
