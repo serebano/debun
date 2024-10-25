@@ -1,9 +1,15 @@
 {
+    "name": "@serebano/debun",
+    "version": "0.0.2",
+    "description": "Enable remote imports for Bun using Deno",
+    "exports": {
+        ".": "./index.ts"
+    },
     "tasks": {
         "test": "deno test --watch deno.test.ts"
     },
     "importMap": "./import_map.json",
-    "nodeModulesDir": "none",
+    "nodeModulesDir": "manual",
     "test": {
         "include": [
             "deno.test.ts"
