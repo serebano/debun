@@ -6,10 +6,13 @@
         ".": "./index.ts"
     },
     "tasks": {
-        "test": "deno test --watch deno.test.ts"
+        "test": "deno test -A --watch ./deno.test.ts"
     },
-    "importMap": "./import_map.json",
-    "nodeModulesDir": "manual",
+    "imports": {
+        "bun": "npm:bun-types@^1.1.33",
+        "bun:test": "npm:bun-types@^1.1.33"
+    },
+    "nodeModulesDir": "auto",
     "test": {
         "include": [
             "deno.test.ts"
